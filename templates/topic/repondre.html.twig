@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Répondre{% endblock %}
+
+{% block body %}
+    <h1>Répondre</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('topic_show', {'id': topic.id }) }}" class="btn btn-light">Revenir au topic</a>
+{% endblock %}
